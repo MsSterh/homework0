@@ -37,10 +37,10 @@ class TestBinaryMultipleOf4 < MiniTest::Unit::TestCase
   end
 
   def test_binary_multiple_of_4_for_binaries_non_multiple_of_4
-    assert_equal false, binary_multiple_of_4?('11111')
+    assert_equal false, binary_multiple_of_4?('11111001')
   end
 
-  def test_binary_multiple_of_4_for_binaries_non_multiple_of_4
+  def test_binary_multiple_of_4_for_binaries_multiple_of_4
     assert_equal true, binary_multiple_of_4?('10000')
   end
 end

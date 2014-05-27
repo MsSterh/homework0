@@ -16,5 +16,17 @@
 # with a leading dollar sign and trailing zeros,
 # that is, a price of 20 should display as "$20.00"
 # and a price of 33.8 should display as "$33.80".
+
 class BookInStock
+  attr_accessor :isbn, :price
+
+  def initialize(isbn, price)
+    raise ArgumentError, 'ISBN is requered and price must be > 0' unless isbn != nil && price != nil && !isbn.empty? && price > 0
+    @isbn = isbn
+    @price = price
+  end
+
+  def price_as_string
+    '$%.2f' % price
+  end
 end

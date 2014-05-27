@@ -44,6 +44,8 @@ class TestSumToN < MiniTest::Unit::TestCase
     assert_equal true, sum_to_n?([50, -5, 10, 20, 30], 40)
     assert_equal true, sum_to_n?([50, -5, 10, 20, 30], 25)
     assert_equal false, sum_to_n?([50, -5, 10, 20, 30], 100)
+    assert_equal false, sum_to_n?([100, 100], 100)
+    assert_equal false, sum_to_n?([25, 50], 100)
   end
 end
 
